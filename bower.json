@@ -1,0 +1,32 @@
+{
+    "name": "native-js",
+    "version": "0.1.1",
+    "main": "main.js",
+    "description": "Native Helper for Javascript",
+    "readme": "readme.md",
+
+    "keywords": [
+        "native",
+        "javascript",
+        "native js",
+        "javascript helper"
+    ],
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mahdaen/native-js.git"
+    },
+
+    "dependencies": {
+        "requirejs": "*"
+    },
+
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Nanang Mahdaen El Agung",
+            "email": "mahdaen@gmail.com"
+        }
+    ]
+}

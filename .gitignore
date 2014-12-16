@@ -1,0 +1,4 @@
+# Created by .gitignore support plugin (hsz.mobi)
+test/libraries
+node_modules
+test
