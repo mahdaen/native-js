@@ -32,10 +32,10 @@
                     handler.call(thisArg, object.charAt(i), (i + 1));
                 }
             } else {
-                return console.error('Euw! We can\'t iterate your object. So sorry!');
+                return console.warn('Euw! We can\'t iterate your object. So sorry!');
             }
         } else {
-            console.error('Euw! Don\'t forget to give us a function to call!');
+            console.warn('Euw! Don\'t forget to give us a function to call!');
         }
 
         return object;

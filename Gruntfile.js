@@ -26,9 +26,10 @@ module.exports = function(grunt) {
                         source + 'com.iterator.js',
                         source + 'com.private.js',
                         source + 'com.circler.js',
+                        //source + 'com.objectpath.js',
 
                         /* Alternatives */
-                        source + 'com.object.js'
+                        //source + 'com.object.js'
                     ]
                 }
             }
