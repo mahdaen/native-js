@@ -47,7 +47,7 @@ window.__nconfig = {};
      * @returns {boolean}
      */
     var isString = function($object) {
-        return typeof $object === 'string' || $object.constructor.name.toString() === 'String' ? true : false;
+        return typeof $object === 'string' ? true : false;
     };
     window.isString = function($object) { return isString($object)};
 

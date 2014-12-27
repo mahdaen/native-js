@@ -1,6 +1,6 @@
 {
     "name": "native-js",
-    "version": "0.1.1",
+    "version": "1.0.3",
     "main": "index.js",
     "description": "Native Helper for Javascript",
     "readme": "readme.md",
