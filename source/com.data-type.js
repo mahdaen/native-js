@@ -60,7 +60,7 @@
      * @returns {boolean}
      */
     var isNumber = function($object) {
-        return typeof $object === 'number' || $object.constructor.name.toString() === 'Number' ? true : false;
+        return typeof $object === 'number' ? true : false;
     };
     window.isNumber =  function($object) { return isNumber($object)};
 
