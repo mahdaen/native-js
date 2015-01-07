@@ -31,6 +31,10 @@
                 for (var i = 0; i < object.length; ++i) {
                     handler.call(thisArg, object.charAt(i), (i + 1));
                 }
+            } else if (window.isDOMList(object) && window.isFunction(handler)) {
+                for (var i = 0; i < object.length; ++i) {
+                    handler.call(thisArg, object[i], i);
+                }
             } else {
                 return console.warn('Euw! We can\'t iterate your object. So sorry!');
             }
