@@ -127,9 +127,19 @@ window.__nconfig = {};
      * @returns {boolean}
      */
     var isDOMList = function($object) {
-        return typeof $object === 'object' && $object.name && $object.name === 'node-list' ? true : false;
+        return typeof $object === 'object' && $object.name && $object.name === 'DOMList' ? true : false;
     };
     window.isDOMList = function($object) { return isDOMList($object) };
+
+    /**
+     * Check whether type of variable is HTML Formatted String or not.
+     * @param $object - Variable to check.
+     * @returns {boolean}
+     */
+    var isHTMLString = function($object) {
+        return typeof $object !== 'undefined' && $object.match(/<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/) ? true : false;
+    }
+    window.isHTMLString = function($object) { return isHTMLString($object) };
 
     /**
      * Check whether type of string is Color format or not.
@@ -219,7 +229,49 @@ window.__nconfig = {};
         return object;
     };
 
-    window.foreach = function($object, $handlder, $args) { return foreach($object, $handlder, $args)};
+    /**
+     * Reversed Iterator.
+     * @param $object - Object to iterate.
+     * @param $handler - Function that handle each item.
+     * @param $args - Optional arguments.
+     * @returns {*}
+     */
+    var reveach = function($object, $handler, $args) {
+        if (window.isFunction($handler)) {
+            if (window.isArray($object)) {
+                for (var i = ($object.length - 1); i >= 0; --i) {
+                    $handler.call($args, $object[i], i);
+                }
+            } else if (window.isObject($object)) {
+                var keys = Object.keys($object);
+
+                for (var i = (keys.length - 1); i >= 0; --i) {
+                    $handler.call($args, keys[i], $object[keys[i]]);
+                }
+            } else if (window.isNumber($object)) {
+                for (var i = $object; i >= 1; --i) {
+                    $handler.call($args, i);
+                }
+            } else if (window.isString($object)) {
+                for (var i = ($object.length - 1); i >= 0; --i) {
+                    $handler.call($args, $object.charAt(i), i);
+                }
+            } else if (window.isDOMList($object)) {
+                for (var i = ($object.length - 1); i >= 0; --i) {
+                    $handler.call($args, $object[i], i);
+                }
+            } else {
+                return console.warn('Euw! We can\'t iterate your object. So sorry!');
+            }
+        } else {
+            console.warn('Euw! Don\'t forget to give us a function to call!');
+        }
+
+        return $object;
+    };
+
+    window.foreach = function($object, $handlder, $args) { return foreach($object, $handlder, $args) };
+    window.reveach = function($object, $handlder, $args) { return reveach($object, $handlder, $args) };
 })();
 
 /**

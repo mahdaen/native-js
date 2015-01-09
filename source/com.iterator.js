@@ -45,5 +45,47 @@
         return object;
     };
 
-    window.foreach = function($object, $handlder, $args) { return foreach($object, $handlder, $args)};
+    /**
+     * Reversed Iterator.
+     * @param $object - Object to iterate.
+     * @param $handler - Function that handle each item.
+     * @param $args - Optional arguments.
+     * @returns {*}
+     */
+    var reveach = function($object, $handler, $args) {
+        if (window.isFunction($handler)) {
+            if (window.isArray($object)) {
+                for (var i = ($object.length - 1); i >= 0; --i) {
+                    $handler.call($args, $object[i], i);
+                }
+            } else if (window.isObject($object)) {
+                var keys = Object.keys($object);
+
+                for (var i = (keys.length - 1); i >= 0; --i) {
+                    $handler.call($args, keys[i], $object[keys[i]]);
+                }
+            } else if (window.isNumber($object)) {
+                for (var i = $object; i >= 1; --i) {
+                    $handler.call($args, i);
+                }
+            } else if (window.isString($object)) {
+                for (var i = ($object.length - 1); i >= 0; --i) {
+                    $handler.call($args, $object.charAt(i), i);
+                }
+            } else if (window.isDOMList($object)) {
+                for (var i = ($object.length - 1); i >= 0; --i) {
+                    $handler.call($args, $object[i], i);
+                }
+            } else {
+                return console.warn('Euw! We can\'t iterate your object. So sorry!');
+            }
+        } else {
+            console.warn('Euw! Don\'t forget to give us a function to call!');
+        }
+
+        return $object;
+    };
+
+    window.foreach = function($object, $handlder, $args) { return foreach($object, $handlder, $args) };
+    window.reveach = function($object, $handlder, $args) { return reveach($object, $handlder, $args) };
 })();

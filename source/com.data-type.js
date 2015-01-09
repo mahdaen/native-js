@@ -100,9 +100,19 @@
      * @returns {boolean}
      */
     var isDOMList = function($object) {
-        return typeof $object === 'object' && $object.name && $object.name === 'node-list' ? true : false;
+        return typeof $object === 'object' && $object.name && $object.name === 'DOMList' ? true : false;
     };
     window.isDOMList = function($object) { return isDOMList($object) };
+
+    /**
+     * Check whether type of variable is HTML Formatted String or not.
+     * @param $object - Variable to check.
+     * @returns {boolean}
+     */
+    var isHTMLString = function($object) {
+        return typeof $object !== 'undefined' && $object.match(/<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/) ? true : false;
+    }
+    window.isHTMLString = function($object) { return isHTMLString($object) };
 
     /**
      * Check whether type of string is Color format or not.
