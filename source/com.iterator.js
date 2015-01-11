@@ -5,11 +5,45 @@
 
 (function() {
     /**
-     * Iterate Object, Array, Number, and String.
-     * @param object - Variable to iterate.
-     * @param handler - Function that handle each result.
-     * @param thisArg - Optional Arguments
-     * @returns {*}
+     * @apiGroup Iterator
+     *
+     * @api {foreach} foreach(object,handler); foreach()
+     * @apiName Foreach
+     * @apiDescription Perform loop through Array, Object, String, Number and DOMList.
+     *
+     * @apiParam {Any} object Array, Object, String, Number or DOMList.
+     * @apiParam {func} handler Function that handle each item.
+     * <br>Array iterator will give 'value' and 'index' as argument.
+     * <br>Object iterator will give 'key' and 'value' as argument.
+     * <br>String iterator will give 'char' and 'index' as argument.
+     * <br>Number iterator will give 'number' as argument.
+     * <br>DOMList iterator will give 'elem' and 'index' as argument.
+     *
+     * @apiExample {js} Sample: Array
+     * var arr = [1,2,3,4];
+     *
+     * foreach(arr, function(value, i) {
+     *     console.log(value, i); // 1 0 >> 2 1 >> 3 2 >> 4 3
+     * }
+     *
+     * @apiExample {js} Sample: Object
+     * var obj = {a: 1, b: 2};
+     *
+     * foreach(obj, function(key, value) {
+     *     console.log(key, value); // a 1 >> b 2
+     * }
+     *
+     * @apiExample {js} Sample: String
+     * var str = 'Foo';
+     *
+     * foreach(str, function(char, i) {
+     *     console.log(char, i); // F 0 >> o 1 >> o 2
+     * }
+     *
+     * @apiExample {js} Sample: Number
+     * foreach(5, function(number) {
+     *     console.log(number); // 1 >> 2 >> 3 >> 4 >> 5
+     * }
      */
     var foreach = function(object, handler, thisArg) {
         if (window.isFunction(handler)) {
@@ -46,11 +80,45 @@
     };
 
     /**
-     * Reversed Iterator.
-     * @param $object - Object to iterate.
-     * @param $handler - Function that handle each item.
-     * @param $args - Optional arguments.
-     * @returns {*}
+     * @apiGroup Iterator
+     *
+     * @api {reveach} reveach(object,handler); reveach()
+     * @apiName Reveach
+     * @apiDescription Perform reversed loop through Array, Object, String, Number and DOMList.
+     *
+     * @apiParam {Any} object Array, Object, String, Number or DOMList.
+     * @apiParam {func} handler Function that handle each item.
+     * <br>Array iterator will give 'value' and 'index' as argument.
+     * <br>Object iterator will give 'key' and 'value' as argument.
+     * <br>String iterator will give 'char' and 'index' as argument.
+     * <br>Number iterator will give 'number' as argument.
+     * <br>DOMList iterator will give 'elem' and 'index' as argument.
+     *
+     * @apiExample {js} Sample: Array
+     * var arr = [1,2,3,4];
+     *
+     * reveach(arr, function(value, i) {
+     *     console.log(value, i); // 4 3 >> 3 2 >> 2 1 >> 1 0
+     * }
+     *
+     * @apiExample {js} Sample: Object
+     * var obj = {a: 1, b: 2};
+     *
+     * reveach(obj, function(key, value) {
+     *     console.log(key, value); // b 2 >> a 1
+     * }
+     *
+     * @apiExample {js} Sample: String
+     * var str = 'Foo';
+     *
+     * reveach(str, function(char, i) {
+     *     console.log(char, i); // o 2 >> o 1 >> F 0
+     * }
+     *
+     * @apiExample {js} Sample: Number
+     * reveach(5, function(number) {
+     *     console.log(number); // 5 >> 4 >> 3 >> 2 >> 1
+     * }
      */
     var reveach = function($object, $handler, $args) {
         if (window.isFunction($handler)) {

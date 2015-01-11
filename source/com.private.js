@@ -10,10 +10,24 @@ window.__functions = {};
 
 (function() {
     /**
-     * Creating Private Variables.
-     * @param name - String Variable Name.
-     * @param value - Defined Value.
-     * @returns {*}
+     * @apiGroup Private
+     *
+     * @api {vars} vars(name,value); vars()
+     * @apiName Vars
+     * @apiDescription Get or Set private variable.
+     * Since it's private, you must use vars() to read the value.
+     * Private variable live under single scope.
+     * Defining value in same name will replace the value, wherever you use that.
+     *
+     * @apiParam {String} name Variable name.
+     * @apiParam {Any} [value] Variable value. Leave blank to read value.
+     *
+     * @apiExample {js} Sample #1
+     * x = vars('foo', 'bar'); // Set private variable foo to "bar".
+     *
+     * x = vars('foo'); // Read private variable foo.
+     *
+     * x = foo; // Error.
      */
     var vars = function(name, value) {
         if (window.isString(name)) {
@@ -36,10 +50,26 @@ window.__functions = {};
     window.vars = function($name, $value) { return new vars($name, $value) };
 
     /**
-     * Create Private Constants.
-     * @param name - Constant Name.
-     * @param value - Constant Value.
-     * @returns {*}
+     * @apiGroup Private
+     *
+     * @api {cons} cons(name,value); cons()
+     * @apiName Cons
+     * @apiDescription Read or create new read-only variable.
+     * Since it's private, you must use cons() to read the value.
+     * Private variable live under single scope.
+     * You can change the value of the constant that already created.
+     *
+     * @apiParam {String} name Constant name.
+     * @apiParam {Any} [value] Constant value. Leave blank to read value.
+     *
+     * @apiExample {js} Sample #1
+     * x = cons('foo', 'bar'); // Set private constant foo to "bar".
+     *
+     * x = cons('foo'); // Read private variable foo.
+     *
+     * x = cons('foo', 'foobar'); // Nothing changed.
+     *
+     * x = foo; // Error.
      */
     var cons = function(name, value) {
         if (window.isString(name)) {
@@ -65,10 +95,33 @@ window.__functions = {};
     window.cons = function($name, $value) { return new cons($name, $value) };
 
     /**
-     * Create Private Function.
-     * @param name - Function Name.
-     * @param value - Function to call.
-     * @returns {*}
+     * @apiGroup Private
+     *
+     * @api {func} func(name,handler); func()
+     * @apiName Func
+     * @apiDescription Run or create new read-only and private function.
+     * Since it's private, you must use func() to call the function.
+     * Private function live under single scope.
+     * You can't change the function handler to the function that already defined.
+     *
+     * @apiParam {String} name Function name.
+     * @apiParam {Any} [handler] Function handler. Leave blank to read value.
+     *
+     * @apiExample {js} Sample #1
+     * // Create new function.
+     * func('foo', function() {
+     *     console.log('bar');
+     * });
+     *
+     * // Call function.
+     * func('foo')();
+     *
+     * // Nothing changed since function 'foo' already defined.
+     * func('foo', function() {
+     *     console.log('foo');
+     * });
+     *
+     * foo(); // ERROR.
      */
     var func = function(name, handler) {
         if (window.isString(name)) {

@@ -32,6 +32,14 @@ module.exports = function(grunt) {
                         //source + 'com.object.js'
                     ]
                 }
+            },
+
+            dist: {
+                files: {
+                    'dist/nativejs.js': [
+                        'index.js'
+                    ]
+                }
             }
         },
 
@@ -46,8 +54,19 @@ module.exports = function(grunt) {
             },
             build: {
                 files: {
-                    'index.min.js': 'build/index.js'
+                    'index.min.js': 'index.js'
                 }
+            },
+            dist: {
+                files: {
+                    'dist/nativejs.min.js': 'dist/nativejs.js'
+                }
+            }
+        },
+        apidoc: {
+            core: {
+                src: 'dist/',
+                dest: 'docs/'
             }
         },
         watch: {
@@ -56,7 +75,7 @@ module.exports = function(grunt) {
             },
             core: {
                 files: [source + '**/*.js'],
-                tasks: ['concat']
+                tasks: ['concat', 'apidoc']
             }
         }
     });
@@ -64,7 +83,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-apidoc');
 
     grunt.registerTask('default', ['concat:core', 'watch']);
-    grunt.registerTask('build', ['concat:build', 'uglify:build']);
+    grunt.registerTask('build', ['concat', 'uglify', 'apidoc']);
 }
