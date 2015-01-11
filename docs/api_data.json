@@ -465,7 +465,7 @@
     "groupTitle": "Data_Type"
   },
   {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "group": "Iterator",
     "type": "foreach",
     "url": "foreach(object,handler);",
@@ -518,7 +518,7 @@
     "groupTitle": "Iterator"
   },
   {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "group": "Iterator",
     "type": "reveach",
     "url": "reveach(object,handler);",
@@ -571,7 +571,7 @@
     "groupTitle": "Iterator"
   },
   {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "group": "Private",
     "type": "cons",
     "url": "cons(name,value);",
@@ -609,7 +609,7 @@
     "groupTitle": "Private"
   },
   {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "group": "Private",
     "type": "func",
     "url": "func(name,handler);",
@@ -647,7 +647,7 @@
     "groupTitle": "Private"
   },
   {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "group": "Private",
     "type": "vars",
     "url": "vars(name,value);",

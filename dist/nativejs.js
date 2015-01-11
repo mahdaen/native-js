@@ -369,7 +369,7 @@ window.__nconfig = {};
 
 (function() {
     /**
-     * @apiVersion 1.0.0
+     * @apiVersion 1.1.0
      * @apiGroup Iterator
      *
      * @api {foreach} foreach(object,handler); foreach()
@@ -445,7 +445,7 @@ window.__nconfig = {};
     };
 
     /**
-     * @apiVersion 1.0.0
+     * @apiVersion 1.1.0
      * @apiGroup Iterator
      *
      * @api {reveach} reveach(object,handler); reveach()
@@ -536,7 +536,7 @@ window.__functions = {};
 
 (function() {
     /**
-     * @apiVersion 1.0.0
+     * @apiVersion 1.1.0
      * @apiGroup Private
      *
      * @api {vars} vars(name,value); vars()
@@ -577,7 +577,7 @@ window.__functions = {};
     window.vars = function($name, $value) { return new vars($name, $value) };
 
     /**
-     * @apiVersion 1.0.0
+     * @apiVersion 1.1.0
      * @apiGroup Private
      *
      * @api {cons} cons(name,value); cons()
@@ -623,7 +623,7 @@ window.__functions = {};
     window.cons = function($name, $value) { return new cons($name, $value) };
 
     /**
-     * @apiVersion 1.0.0
+     * @apiVersion 1.1.0
      * @apiGroup Private
      *
      * @api {func} func(name,handler); func()
