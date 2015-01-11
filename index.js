@@ -32,6 +32,7 @@ window.__nconfig = {};
 
 (function() {
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isDefined} isDefined(variable); isDefined()
@@ -53,6 +54,7 @@ window.__nconfig = {};
     window.isDefined = function($object) { return isDefined($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isString} isString(variable); isString()
@@ -74,6 +76,7 @@ window.__nconfig = {};
     window.isString = function($object) { return isString($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isObject} isObject(variable); isObject()
@@ -95,6 +98,7 @@ window.__nconfig = {};
     window.isObject = function($object) { return isObject($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isArray} isArray(variable); isArray()
@@ -116,6 +120,7 @@ window.__nconfig = {};
     window.isArray = function($object) { return isArray($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isFunction} isFunction(variable); isFunction()
@@ -137,6 +142,7 @@ window.__nconfig = {};
     window.isFunction = function($object) { return isFunction($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isNumber} isNumber(variable); isNumber()
@@ -158,6 +164,7 @@ window.__nconfig = {};
     window.isNumber =  function($object) { return isNumber($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isBoolean} isBoolean(variable); isBoolean()
@@ -179,6 +186,7 @@ window.__nconfig = {};
     window.isBoolean = function($object) { return isBoolean($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isJQuery} isJQuery(variable); isJQuery()
@@ -200,6 +208,7 @@ window.__nconfig = {};
     window.isJQuery = function($object) { return isJQuery($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isHTML} isHTML(variable); isHTML()
@@ -221,6 +230,7 @@ window.__nconfig = {};
     window.isHTML = function($object) { return isHTML($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isDOMList} isDOMList(variable); isDOMList()
@@ -242,6 +252,7 @@ window.__nconfig = {};
     window.isDOMList = function($object) { return isDOMList($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isHTMLString} isHTMLString(variable); isHTMLString()
@@ -263,6 +274,7 @@ window.__nconfig = {};
     window.isHTMLString = function($object) { return isHTMLString($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isColor} isColor(variable); isColor()
@@ -284,6 +296,7 @@ window.__nconfig = {};
     window.isColor = function($object) { return isColor($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isURL} isURL(variable); isURL()
@@ -305,6 +318,7 @@ window.__nconfig = {};
     window.isURL = function($object) { return isURL($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isEmail} isEmail(variable); isEmail()
@@ -326,6 +340,7 @@ window.__nconfig = {};
     window.isEmail = function($object) { return isEmail($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isDate} isDate(variable); isDate()
@@ -354,6 +369,7 @@ window.__nconfig = {};
 
 (function() {
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Iterator
      *
      * @api {foreach} foreach(object,handler); foreach()
@@ -429,6 +445,7 @@ window.__nconfig = {};
     };
 
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Iterator
      *
      * @api {reveach} reveach(object,handler); reveach()
@@ -519,6 +536,7 @@ window.__functions = {};
 
 (function() {
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Private
      *
      * @api {vars} vars(name,value); vars()
@@ -559,6 +577,7 @@ window.__functions = {};
     window.vars = function($name, $value) { return new vars($name, $value) };
 
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Private
      *
      * @api {cons} cons(name,value); cons()
@@ -604,6 +623,7 @@ window.__functions = {};
     window.cons = function($name, $value) { return new cons($name, $value) };
 
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Private
      *
      * @api {func} func(name,handler); func()

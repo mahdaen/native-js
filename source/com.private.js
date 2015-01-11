@@ -10,6 +10,7 @@ window.__functions = {};
 
 (function() {
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Private
      *
      * @api {vars} vars(name,value); vars()
@@ -50,6 +51,7 @@ window.__functions = {};
     window.vars = function($name, $value) { return new vars($name, $value) };
 
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Private
      *
      * @api {cons} cons(name,value); cons()
@@ -95,6 +97,7 @@ window.__functions = {};
     window.cons = function($name, $value) { return new cons($name, $value) };
 
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Private
      *
      * @api {func} func(name,handler); func()

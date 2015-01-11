@@ -1,5 +1,6 @@
 define({ "api": [
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isArray",
     "url": "isArray(variable);",
@@ -26,11 +27,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isBoolean",
     "url": "isBoolean(variable);",
@@ -57,11 +58,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isColor",
     "url": "isColor(variable);",
@@ -88,11 +89,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isDOMList",
     "url": "isDOMList(variable);",
@@ -119,11 +120,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isDate",
     "url": "isDate(variable);",
@@ -150,11 +151,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isDefined",
     "url": "isDefined(variable);",
@@ -181,11 +182,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isEmail",
     "url": "isEmail(variable);",
@@ -212,11 +213,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isFunction",
     "url": "isFunction(variable);",
@@ -243,11 +244,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isHTML",
     "url": "isHTML(variable);",
@@ -274,11 +275,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isHTMLString",
     "url": "isHTMLString(variable);",
@@ -305,11 +306,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isJQuery",
     "url": "isJQuery(variable);",
@@ -336,11 +337,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isNumber",
     "url": "isNumber(variable);",
@@ -367,11 +368,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isObject",
     "url": "isObject(variable);",
@@ -398,11 +399,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isString",
     "url": "isString(variable);",
@@ -429,11 +430,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.1.0",
     "group": "Data_Type",
     "type": "isURL",
     "url": "isURL(variable);",
@@ -460,11 +461,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Data_Type"
   },
   {
+    "version": "1.0.0",
     "group": "Iterator",
     "type": "foreach",
     "url": "foreach(object,handler);",
@@ -513,11 +514,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Iterator"
   },
   {
+    "version": "1.0.0",
     "group": "Iterator",
     "type": "reveach",
     "url": "reveach(object,handler);",
@@ -566,11 +567,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Iterator"
   },
   {
+    "version": "1.0.0",
     "group": "Private",
     "type": "cons",
     "url": "cons(name,value);",
@@ -604,11 +605,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Private"
   },
   {
+    "version": "1.0.0",
     "group": "Private",
     "type": "func",
     "url": "func(name,handler);",
@@ -642,11 +643,11 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Private"
   },
   {
+    "version": "1.0.0",
     "group": "Private",
     "type": "vars",
     "url": "vars(name,value);",
@@ -680,7 +681,6 @@ define({ "api": [
         "type": "js"
       }
     ],
-    "version": "0.0.0",
     "filename": "dist/nativejs.js",
     "groupTitle": "Private"
   }

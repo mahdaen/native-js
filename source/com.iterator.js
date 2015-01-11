@@ -5,6 +5,7 @@
 
 (function() {
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Iterator
      *
      * @api {foreach} foreach(object,handler); foreach()
@@ -80,6 +81,7 @@
     };
 
     /**
+     * @apiVersion 1.0.0
      * @apiGroup Iterator
      *
      * @api {reveach} reveach(object,handler); reveach()

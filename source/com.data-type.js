@@ -5,6 +5,7 @@
 
 (function() {
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isDefined} isDefined(variable); isDefined()
@@ -26,6 +27,7 @@
     window.isDefined = function($object) { return isDefined($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isString} isString(variable); isString()
@@ -47,6 +49,7 @@
     window.isString = function($object) { return isString($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isObject} isObject(variable); isObject()
@@ -68,6 +71,7 @@
     window.isObject = function($object) { return isObject($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isArray} isArray(variable); isArray()
@@ -89,6 +93,7 @@
     window.isArray = function($object) { return isArray($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isFunction} isFunction(variable); isFunction()
@@ -110,6 +115,7 @@
     window.isFunction = function($object) { return isFunction($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isNumber} isNumber(variable); isNumber()
@@ -131,6 +137,7 @@
     window.isNumber =  function($object) { return isNumber($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isBoolean} isBoolean(variable); isBoolean()
@@ -152,6 +159,7 @@
     window.isBoolean = function($object) { return isBoolean($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isJQuery} isJQuery(variable); isJQuery()
@@ -173,6 +181,7 @@
     window.isJQuery = function($object) { return isJQuery($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isHTML} isHTML(variable); isHTML()
@@ -194,6 +203,7 @@
     window.isHTML = function($object) { return isHTML($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isDOMList} isDOMList(variable); isDOMList()
@@ -215,6 +225,7 @@
     window.isDOMList = function($object) { return isDOMList($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isHTMLString} isHTMLString(variable); isHTMLString()
@@ -236,6 +247,7 @@
     window.isHTMLString = function($object) { return isHTMLString($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isColor} isColor(variable); isColor()
@@ -257,6 +269,7 @@
     window.isColor = function($object) { return isColor($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isURL} isURL(variable); isURL()
@@ -278,6 +291,7 @@
     window.isURL = function($object) { return isURL($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isEmail} isEmail(variable); isEmail()
@@ -299,6 +313,7 @@
     window.isEmail = function($object) { return isEmail($object) };
 
     /**
+     * @apiVersion 1.1.0
      * @apiGroup Data Type
      *
      * @api {isDate} isDate(variable); isDate()
