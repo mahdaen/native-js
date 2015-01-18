@@ -66,7 +66,7 @@
      * isObject(bar); // false
      */
     var isObject = function($object) {
-        return typeof $object === 'object' && $object.indexOf === undefined && $object.splice === undefined && $object.name !== 'DOMList' ? true : false;
+        return typeof $object === 'object' && !$object.length ? true : false;
     };
     window.isObject = function($object) { return isObject($object) };
 
