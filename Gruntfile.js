@@ -36,12 +36,21 @@ module.exports = function(grunt) {
         },
 
         uglify: {
-            options: {
-                mangle: false
-            },
             dist: {
+                options: {
+                    mangle: true
+                },
                 files: {
                     'dist/nativejs.min.js': 'dist/nativejs.js'
+                }
+            },
+            clean: {
+                options: {
+                    mangle: false,
+                    beautify: true
+                },
+                files: {
+                    'dist/nativejs.clean.js': 'dist/nativejs.js'
                 }
             }
         },
