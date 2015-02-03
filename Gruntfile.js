@@ -15,9 +15,9 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         concat: {
-            core: {
+            dist: {
                 files: {
-                    'index.js': [
+                    'dist/nativejs.js': [
                         /* Header. */
                         source + 'header.js',
 
@@ -25,19 +25,11 @@ module.exports = function(grunt) {
                         source + 'com.data-type.js',
                         source + 'com.iterator.js',
                         source + 'com.private.js',
-                        source + 'com.circler.js',
+                        //source + 'com.circler.js',
                         //source + 'com.objectpath.js',
 
                         /* Alternatives */
                         //source + 'com.object.js'
-                    ]
-                }
-            },
-
-            dist: {
-                files: {
-                    'dist/nativejs.js': [
-                        'index.js'
                     ]
                 }
             }
@@ -45,17 +37,7 @@ module.exports = function(grunt) {
 
         uglify: {
             options: {
-                mangle: false,
-                banner: '/* \n' +
-                '\t <%= pkg.name %> - v<%= pkg.version %> \n' +
-                '\t Included libraries: \n' +
-                '\t jQuery, Enquire. \n' +
-                '*/\n'
-            },
-            build: {
-                files: {
-                    'index.min.js': 'index.js'
-                }
+                mangle: false
             },
             dist: {
                 files: {
@@ -85,6 +67,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-apidoc');
 
-    grunt.registerTask('default', ['concat:core', 'watch']);
+    grunt.registerTask('default', ['concat', 'watch']);
     grunt.registerTask('build', ['concat', 'uglify', 'apidoc']);
 }
