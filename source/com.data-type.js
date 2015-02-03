@@ -66,7 +66,7 @@
      * isObject(bar); // false
      */
     var isObject = function($object) {
-        return typeof $object === 'object' && !$object.length ? true : false;
+        return $object !== null && typeof $object === 'object' && !$object.length ? true : false;
     };
     window.isObject = function($object) { return isObject($object) };
 
