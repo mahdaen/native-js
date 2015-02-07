@@ -115,7 +115,7 @@ window.__nconfig = {};
      * isArray(bar); // false
      */
     var isArray = function($object) {
-        return typeof $object === 'object' && Array.isArray($object) ? true : false;
+        return typeof $object === 'object' && (Array.isArray($object) || ('length' in $object)) ? true : false;
     };
     window.isArray = function($object) { return isArray($object) };
 

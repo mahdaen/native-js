@@ -24,7 +24,7 @@ if (!window) var window = {};
         return isObject($object);
     };
     var isArray = function($object) {
-        return "object" == typeof $object && Array.isArray($object) ? !0 : !1;
+        return "object" == typeof $object && (Array.isArray($object) || "length" in $object) ? !0 : !1;
     };
     window.isArray = function($object) {
         return isArray($object);
