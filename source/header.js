@@ -7,21 +7,9 @@
  */
 
 /* Creating Container */
-if (!window) {
+if ('undefined' == typeof window) {
     var window = {};
 }
-
-/* Module Wrapper */
-(function(native) {
-    if (typeof module !== 'undefined' && module.exports) {
-        /* NodeJS */
-        module.exports = native();
-    } else {
-        return native();
-    }
-})(function() {
-    return window;
-});
 
 /* Adding Configurations Space */
 window.__nconfig = {};

@@ -7,21 +7,9 @@
  */
 
 /* Creating Container */
-if (!window) {
+if ('undefined' == typeof window) {
     var window = {};
 }
-
-/* Module Wrapper */
-(function(native) {
-    if (typeof module !== 'undefined' && module.exports) {
-        /* NodeJS */
-        module.exports = native();
-    } else {
-        return native();
-    }
-})(function() {
-    return window;
-});
 
 /* Adding Configurations Space */
 window.__nconfig = {};
@@ -675,3 +663,11 @@ window.__functions = {};
     };
     window.func = function($name, $handler) { return new func($name, $handler) };
 })();
+
+if ('undefined' !== typeof global && !global.foreach) {
+    for (var key in window) {
+        global[key] = window[key];
+    }
+
+    module.exports = window;
+}

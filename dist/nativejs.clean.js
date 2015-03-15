@@ -1,10 +1,6 @@
-if (!window) var window = {};
+if ("undefined" == typeof window) var window = {};
 
-!function(native) {
-    return "undefined" != typeof module && module.exports ? void (module.exports = native()) : native();
-}(function() {
-    return window;
-}), window.__nconfig = {}, function() {
+if (window.__nconfig = {}, function() {
     var isDefined = function($object) {
         return "undefined" != typeof $object ? !0 : !1;
     };
@@ -137,4 +133,7 @@ function() {
     window.func = function($name, $handler) {
         return new func($name, $handler);
     };
-}();
+}(), "undefined" != typeof global && !global.foreach) {
+    for (var key in window) global[key] = window[key];
+    module.exports = window;
+}

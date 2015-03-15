@@ -30,6 +30,7 @@ module.exports = function(grunt) {
 
                         /* Alternatives */
                         //source + 'com.object.js'
+                        source + 'footer.js',
                     ]
                 }
             }
